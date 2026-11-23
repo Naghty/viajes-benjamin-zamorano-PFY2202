@@ -2,6 +2,7 @@
   "name": "viajes-benjamin-zamorano-pfy2202",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://naghty.github.io/viajes-benjamin-zamorano-PFY2202/",
   "type": "module",
   "scripts": {
     "dev": "vite",
