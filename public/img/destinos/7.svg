@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ffcc80"/></linearGradient></defs>
+<rect width="600" height="300" fill="url(#g)"/>
+
+<circle cx="110" cy="85" r="38" fill="#fff3c4"/>
+<path d="M120 270 L120 130 Q300 60 480 130 L480 270Z" fill="#d9a066"/>
+<path d="M120 130 Q300 60 480 130 L480 150 Q300 85 120 150Z" fill="#c68b59"/>
+<g fill="#8c5a32"><path d="M150 270 L150 200 Q165 180 180 200 L180 270Z"/><path d="M200 270 L200 195 Q215 175 230 195 L230 270Z"/><path d="M250 270 L250 192 Q265 172 280 192 L280 270Z"/><path d="M320 270 L320 192 Q335 172 350 192 L350 270Z"/><path d="M370 270 L370 195 Q385 175 400 195 L400 270Z"/><path d="M420 270 L420 200 Q435 180 450 200 L450 270Z"/></g>
+<g fill="#8c5a32"><path d="M150 180 L150 150 Q165 130 180 150 L180 180Z"/><path d="M200 175 L200 145 Q215 125 230 145 L230 175Z"/><path d="M250 172 L250 142 Q265 122 280 142 L280 172Z"/><path d="M320 172 L320 142 Q335 122 350 142 L350 172Z"/><path d="M370 175 L370 145 Q385 125 400 145 L400 175Z"/><path d="M420 180 L420 150 Q435 130 450 150 L450 180Z"/></g>
+<rect y="270" width="600" height="30" fill="#6b705c"/>
+</svg>
