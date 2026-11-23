@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/viajes-benjamin-zamorano-PFY2202/',
+  base: '/agencia-de-viajes-/',
   plugins: [react(), tailwindcss()],
 })

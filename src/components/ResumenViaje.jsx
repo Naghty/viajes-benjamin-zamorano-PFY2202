@@ -1,9 +1,17 @@
+import { useEffect, useState } from 'react'
 import { formatoPrecio } from '../utils/formato.js'
 
 export default function ResumenViaje({ destino, vuelo, hotel, noches, onCambiarNoches }) {
+  const [comprado, setComprado] = useState(false)
+
   const totalVuelo = vuelo ? vuelo.precio : 0
   const totalHotel = hotel ? hotel.precioPorNoche * noches : 0
   const total = totalVuelo + totalHotel
+  const puedeComprar = Boolean(vuelo && hotel)
+
+  useEffect(() => {
+    setComprado(false)
+  }, [vuelo?.id, hotel?.id, noches])
 
   return (
     <aside className="bg-white rounded-lg shadow p-4 lg:sticky lg:top-4 self-start">
@@ -36,7 +44,25 @@ export default function ResumenViaje({ destino, vuelo, hotel, noches, onCambiarN
         className="w-full rounded-md border border-slate-300 px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-sky-500"
       />
 
-      <p className="text-lg font-bold">Total: {formatoPrecio(total)}</p>
+      <p className="text-lg font-bold mb-4">Total: {formatoPrecio(total)}</p>
+
+      <button
+        onClick={() => setComprado(true)}
+        disabled={!puedeComprar}
+        className="w-full rounded-md bg-emerald-600 py-2 font-semibold text-white hover:bg-emerald-700 transition disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed"
+      >
+        Comprar
+      </button>
+
+      {!puedeComprar && (
+        <p className="mt-2 text-xs text-slate-500">Selecciona un vuelo y un hotel para comprar</p>
+      )}
+
+      {comprado && (
+        <div className="mt-4 rounded-md border border-emerald-300 bg-emerald-50 p-3 text-sm text-emerald-800" role="status">
+          Compra confirmada: {destino.ciudad} por {noches} noches. Total pagado: {formatoPrecio(total)}.
+        </div>
+      )}
     </aside>
   )
 }
